@@ -15,4 +15,10 @@ public class StreamExample {
         }
         return multiplesOf5;
     }
+
+    public List<Integer> getMultiplesOf5WithStream(List<Integer> source) {
+        return source.stream()
+                .filter(it -> it % 5 == 0)
+                .toList();
+    }
 }

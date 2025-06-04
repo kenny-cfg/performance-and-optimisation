@@ -10,5 +10,8 @@ public class Main {
         val source = List.of(10, 15, 20, 2, 3, 7, 25, 9, 150);
         val multiplesOf5 = streams.getMultiplesOf5(source);
         System.out.println(multiplesOf5);
+        val multiplesOf5WithStreams = streams.getMultiplesOf5WithStream(source);
+        System.out.println("With streams:");
+        System.out.println(multiplesOf5WithStreams);
     }
 }
