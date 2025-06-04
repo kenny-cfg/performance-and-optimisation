@@ -3,6 +3,8 @@ package com.kenny.wenny.performance;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LargestIntegerTest {
@@ -13,7 +15,7 @@ class LargestIntegerTest {
 
         val result = new LargestInteger().findLargest(source);
 
-        assertEquals(expected, result);
+        assertEquals(Optional.of(expected), result);
     }
 
     @Test
@@ -23,7 +25,7 @@ class LargestIntegerTest {
 
         val result = new LargestInteger().findLargest(source);
 
-        assertEquals(expected, result);
+        assertEquals(Optional.of(expected), result);
     }
 
     @Test
@@ -32,6 +34,6 @@ class LargestIntegerTest {
 
         val result = new LargestInteger().findLargest(source);
 
-        assertNull(result);
+        assertTrue(result.isEmpty());
     }
 }
