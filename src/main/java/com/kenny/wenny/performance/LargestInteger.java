@@ -1,7 +1,15 @@
 package com.kenny.wenny.performance;
 
+import lombok.val;
+
 public class LargestInteger {
-    public int findLargest(int[] numList){
-        return 0;
+    public Integer findLargest(int[] numList){
+        Integer largestNumber = null;
+        for (val number : numList) {
+            if (largestNumber == null || largestNumber < number) {
+                largestNumber = number;
+            }
+        }
+        return largestNumber;
     }
 }
